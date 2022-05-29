@@ -1,0 +1,42 @@
+//body {
+//
+//}
+
+//@include tablet {
+//  .container {
+//    padding: 0;
+//  }
+//}
+
+.row,
+.row > * {
+  --bs-gutter-x: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
