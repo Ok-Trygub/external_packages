@@ -52,8 +52,6 @@ const browserSyncJob = () => {
     });
 };
 
-exports.addApp = addApp;
-exports.development = gulp.series(buildPug, buildStyles, browserSyncJob)
-exports.default = async function () {
-    gulp.watch(`./${DIST}/scss/**/*.scss`, gulp.series(buildPug, buildStyles, addApp, browserSyncJob));
+exports.development = async function () {
+    gulp.watch(`./${DIST}/scss/**/*.scss`, gulp.series(gulp.parallel(buildPug, buildStyles), addApp, browserSyncJob));
 };
